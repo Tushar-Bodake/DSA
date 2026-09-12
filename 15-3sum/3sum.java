@@ -1,13 +1,12 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
 
-        List<List<Integer>> result = new ArrayList<>();
+        List<List< Integer >> result = new ArrayList<>();
 
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
 
-            // Skip duplicate i
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -27,19 +26,16 @@ class Solution {
                         nums[right]
                     ));
 
-                    // Skip duplicate left
                     while (left < right &&
                            nums[left] == nums[left + 1]) {
                         left++;
                     }
 
-                    // Skip duplicate right
                     while (left < right &&
                            nums[right] == nums[right - 1]) {
                         right--;
                     }
 
-                    // Move both pointers
                     left++;
                     right--;
 
