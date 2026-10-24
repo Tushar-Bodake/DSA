@@ -7,12 +7,9 @@ class Solution {
                     arr[0]=i;
                     arr[1]=j;
                     break;
-
                 }
             }
         }
-
         return arr;
-
     }
 }
